@@ -29,5 +29,6 @@ flutter:
     - assets/images/salforge_logo.png
     - assets/icons/back_custom.png
     - assets/icons/gate_icon.png
+    - assets/icons/delete_icon.png
 
 

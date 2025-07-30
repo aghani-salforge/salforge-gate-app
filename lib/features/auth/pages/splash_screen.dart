@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:salforge_gate_app/core/constants/assets.dart';
 
-import '../pages/login_screen.dart';
+import '../../../core/theme/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.appBackground,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 80.0), // ⬅️ Adjust as needed
@@ -73,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                   Image.asset(
-                    SLOGO,
+                    SALFORGE_LOGO,
                     height: 28,
                   ),
                 ],

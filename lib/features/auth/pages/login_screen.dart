@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:salforge_gate_app/core/constants/assets.dart';
-import 'forgot_password_screen.dart';
-import '../../dashboard/pages/dashboard_screen.dart'; // Make sure this file exists
+import '../../../core/theme/colors.dart';
+
 
 class LoginScreen extends StatelessWidget {
   // Custom primary color from hex
-  final Color primaryColor = Color(0xFF1B958A);
+  final Color primaryColor = AppColors.appPrimary;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.appBackground,
       body: SafeArea(
         child: Stack(
           children: [
@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                           'Forgot Password?',
                           style: TextStyle(
                             fontFamily: 'Helvetica',
-                            color: Colors.black,
+                            color: AppColors.onSecondary, //Black Color
                           ),
                         ),
                       ),
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                         backgroundColor: primaryColor,
                         padding: EdgeInsets.symmetric(
                           horizontal: 40,
-                          vertical: 12,
+                          vertical: 16,
                         ),
                         shape: StadiumBorder(),
                       ),
@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'Helvetica',
                           fontSize: 16,
-                          color: Colors.white, // White button text
+                          color: AppColors.appBackground, // White button text
                         ),
                       ),
                     )

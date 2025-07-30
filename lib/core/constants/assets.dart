@@ -1,5 +1,7 @@
 String GATE = "assets/icons/gate_icon.png";
-String CBACK = "assets/icons/back_custom.png";
+String BACK_LOGO = "assets/icons/back_custom.png";
+String DELETE_LOGO = "assets/icons/delete_icon.png";
 
-String SLOGO = "assets/images/salforge_logo.png";
+String SALFORGE_LOGO = "assets/images/salforge_logo.png";
 String LOGO = "assets/images/logo.png";
+
