@@ -30,5 +30,6 @@ flutter:
     - assets/icons/back_custom.png
     - assets/icons/gate_icon.png
     - assets/icons/delete_icon.png
+    - assets/icons/info_icon.png
 
 

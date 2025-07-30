@@ -1,4 +1,5 @@
 
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:salforge_gate_app/features/auth/pages/splash_screen.dart';
 import 'package:salforge_gate_app/features/auth/pages/login_screen.dart';
@@ -6,6 +7,7 @@ import 'package:salforge_gate_app/features/auth/pages/forgot_password_screen.dar
 import 'package:salforge_gate_app/features/dashboard/pages/dashboard_screen.dart';
 import '../features/userManagement/pages/create_security_user_screen.dart';
 import '../features/userManagement/pages/mock_security_user_list_screen.dart';
+import '../features/userManagement/pages/owner_credentials_screen.dart';
 import '../features/userManagement/pages/property_owner_screen.dart';
 import '../features/userManagement/pages/security_house_screen.dart';
 import '../features/userManagement/pages/user_management_screen.dart';
@@ -49,6 +51,24 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/mock-security-user-list',
       builder: (context, state) => const MockSecurityUserListScreen(),
+    ),
+    GoRoute(
+      path: '/owner-credentials',
+      builder: (context, state) {
+        final data = state.extra;
+        if (data is! Map<String, String>) {
+          return const Scaffold(
+            body: Center(child: Text('Invalid or missing owner data')),
+          );
+        }
+
+        return OwnerCredentialsScreen(
+          title: data['title'] ?? '',
+          name: data['name'] ?? '',
+          phone: data['phone'] ?? '',
+          propertyDetails: data['propertyDetails'] ?? '',
+        );
+      },
     ),
   ],
 );
