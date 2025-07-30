@@ -5,6 +5,7 @@ import 'package:salforge_gate_app/features/auth/pages/splash_screen.dart';
 import 'package:salforge_gate_app/features/auth/pages/login_screen.dart';
 import 'package:salforge_gate_app/features/auth/pages/forgot_password_screen.dart';
 import 'package:salforge_gate_app/features/dashboard/pages/dashboard_screen.dart';
+import '../features/approvals/pages/approval_screen.dart';
 import '../features/userManagement/pages/create_security_user_screen.dart';
 import '../features/userManagement/pages/mock_security_user_list_screen.dart';
 import '../features/userManagement/pages/owner_credentials_screen.dart';
@@ -70,5 +71,10 @@ final GoRouter router = GoRouter(
         );
       },
     ),
+    GoRoute(
+      path: '/approvals',
+      builder: (context, state) => const ApprovalScreen(),
+    ),
+
   ],
 );
