@@ -19,7 +19,7 @@ class ApprovalScreen extends StatelessWidget {
       'role': 'Visitor',
       'name': 'Sameul',
       'phone': '+1 365 90 11 34',
-      'time': '10:30 AM, 02 July',
+      'time': '10:30 AM, 004 july',
     },
   ];
 
